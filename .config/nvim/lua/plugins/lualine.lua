@@ -3,8 +3,8 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
 
     config = function()
-        local line = require('lualine').setup
-        line.setup {
+        local line = require('lualine').setup {
             options = { theme = 'catpuccin' },
         }
+    end
 }

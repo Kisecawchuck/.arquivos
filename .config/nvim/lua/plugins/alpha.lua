@@ -21,6 +21,7 @@ return {
         }
         dashboard.section.buttons.val = {
             dashboard.button("e", " New file", ":ene <BAR> startinsert <CR>"),
+            dashboard.button("a", "󱇘  Open Agenda", ":Org agenda<CR>"),
             dashboard.button("f", "󰍉  Find file", ":lua require('telescope.builtin').find_files() <CR>"),
             dashboard.button("t", "  Browse cwd", ":NvimTreeOpen<CR>"),
             dashboard.button("r", "  Browse src", ":e ~/.local/src/<CR>"),
