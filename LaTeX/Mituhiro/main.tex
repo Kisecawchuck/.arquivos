@@ -1,0 +1,47 @@
+\documentclass{exam}
+
+\usepackage[portuguese]{babel}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\renewcommand\qedsymbol{QED}
+
+\newtcbtheorem{resposta}{Resposta}{colback=cyan!15!white, colframe=cyan!90!black}{th}
+
+\title{%
+    Matemática Discreta I \\
+    \large ACH2013 -- Turma 94 \\
+    1ª Prova \\
+    Universidade de São Paulo \\
+    Escola de Artes, Ciências e Futebol \\
+}
+\author{Eu mesmo}
+
+\begin{document}
+\maketitle
+\begin{questions}
+    \question[1,5] Considere as seguintes proposições:
+    \begin{parts}
+        \part $\left(p \leftrightarrow \left(\neg q \lor r\right)\right) \rightarrow \left(\neg p \rightarrow q\right)$
+        \part $(p \rightarrow (q \lor r)) \lor (p \rightarrow q)$ \\
+        Mostre que somente uma delas é uma tautologia.
+    \end{parts}
+    \begin{resposta}{}{}
+        \[\left(p \leftrightarrow \left(\neg q \lor r\right)\right) \rightarrow \left(\neg p \rightarrow q\right)\]
+        \[\equiv \neg (\neg (p \lor (\neg q \lor r)) \lor (p \land (\neg q \lor r))) \lor (p \lor q)\]
+        \[\equiv ((p \lor \neg q \lor r) \land \neg((p \land \neg q) \lor (p \land r))) \lor p \lor q\]
+        \[(p \rightarrow (q \lor r)) \lor (p \rightarrow q) \equiv (\neg p \lor (q \lor r)) \lor (\neg p \lor q)\]
+        \[\equiv \neg p \lor q \lor r \lor \neg p \lor q\]
+        \[\equiv \neg p \lor q \lor r\]
+    \end{resposta}
+    \question[2,0] Considere as seguintes premissas ``Não está chovendo hoje ou Mario tem um guarda-chuva.''
+    ``Mario não tem um guarda-chuva ou ele não pegou chuva.'' ``Está chovendo hoje ou Mario não pegou chuva''
+    e mostre que isso leva à conclusão que ``Mario não pegou chuva.''
+    \begin{resposta}{}{}
+        $p \equiv$ ``Está chovendo hoje'', $q \equiv$ ``Mario tem um guarda-chuva'',
+        $r \equiv$ ``Mario pegou chuva''
+        \[(\neg p \lor q) \land (\neg q \lor \neg r) \land (p \lor \neg r)\]
+        \[\equiv (p \rightarrow q) \land (q \rightarrow r) \land (\neg p \rightarrow \neg r)\]
+    \end{resposta}
+\end{questions}
+\end{document}
